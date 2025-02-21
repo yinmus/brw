@@ -9,7 +9,7 @@ HOMEPAGE = "https://www.google.com"
 
 class Browser(Gtk.Window):
     def __init__(self):
-        super().__init__(title="GTK + WebKit Браузер", default_width=1024, default_height=768)
+        super().__init__(title="GTK + WebKit Browser", default_width=1024, default_height=768)
 
         vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=5)
         self.add(vbox)
@@ -25,11 +25,11 @@ class Browser(Gtk.Window):
         for action, icon_path in buttons.items():
             button = Gtk.Button()
             button.set_image(Gtk.Image.new_from_file(icon_path))
-            button.connect("clicked", getattr(self, f"on_{action}_clicked"))
+            button.connect("clicked", getattr(self, f"on_{action}"))
             toolbar.pack_start(button, False, False, 5)
 
-        self.url_entry = Gtk.Entry(text=HOMEPAGE, placeholder_text="Введите адрес или поисковый запрос")
-        self.url_entry.connect("activate", self.on_url_entry_activate)
+        self.url_entry = Gtk.Entry(text=HOMEPAGE, placeholder_text="Enter URL or search")
+        self.url_entry.connect("activate", self.on_url_activate)
         toolbar.pack_start(self.url_entry, True, True, 5)
 
         vbox.pack_start(toolbar, False, False, 0)
@@ -44,19 +44,19 @@ class Browser(Gtk.Window):
 
         self.show_all()
 
-    def on_back_clicked(self, button):
+    def on_back(self, button):
         self.webview.go_back()
 
-    def on_forward_clicked(self, button):
+    def on_forward(self, button):
         self.webview.go_forward()
 
-    def on_reload_clicked(self, button):
+    def on_reload(self, button):
         self.webview.reload()
 
-    def on_home_clicked(self, button):
+    def on_home(self, button):
         self.webview.load_uri(HOMEPAGE)
 
-    def on_url_entry_activate(self, entry):
+    def on_url_activate(self, entry):
         url = entry.get_text()
         if not url.startswith("http://") and not url.startswith("https://"):
             url = "https://" + url
