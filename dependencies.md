@@ -20,3 +20,4 @@ sudo apt install python3-gi python3-gi-cairo gir1.2-gtk-3.0 \
 ```sh
 sudo pacman -S python-gobject gtk3 webkit2gtk
 ```
+(честно, хз, заработает ли у вас на Debian/Ubuntu, только на Arch смотел )
