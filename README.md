@@ -24,4 +24,4 @@ chmod +x install
 ```
 
 ## на винду все равно, если что:
-[гайд](t.md)
+[тут гайd, kak snesty vindu](t.md)
