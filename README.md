@@ -13,6 +13,7 @@ web view
 **клонируйте репо**
 ```bash
 git clone https://github.com/yinmus/brw.git
+cd brw
 ```
 **дайте права на взлом вашей системы**
 ```
