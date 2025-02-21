@@ -23,5 +23,3 @@ chmod +x install
 ./install
 ```
 
-## на винду все равно, если что:
-[тут гайd, kak snesty vindu](t.md)
