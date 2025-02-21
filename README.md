@@ -5,12 +5,12 @@ ___
 web view 
 
 ## Зависимости:
-- python >= 3.6 
-- gtk
-- webkit
+- [python](https://www.python.org/) >= 3.6 
+- [gtk](https://www.gtk.org/) забыл
+- [webkit](https://webkit.org/)
 
 ## Установка:
-**клонируйте репо*
+**клонируйте репо**
 ```bash
 git clone https://github.com/yinmus/brw.git
 ```
