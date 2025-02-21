@@ -4,10 +4,7 @@ ___
 
 
 ## Зависимости:
-- [python](https://www.python.org/) >= 3.6 
-- [gtk](https://www.gtk.org/) забыл
-- [webkit](https://webkit.org/)
-___
+- [Markdown](dependencies.md)
 
 ## Установка:
 **клонируйте репо**
