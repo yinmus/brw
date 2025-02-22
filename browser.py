@@ -23,10 +23,10 @@ class Browser(Gtk.Window):
         }
 
         for action, icon_path in buttons.items():
-            button = Gtk.Button()
-            button.set_image(Gtk.Image.new_from_file(icon_path))
-            button.connect("clicked", getattr(self, f"on_{action}"))
-            toolbar.pack_start(button, False, False, 5)
+            btn = Gtk.Button()
+            btn.set_image(Gtk.Image.new_from_file(icon_path))
+            btn.connect("clicked", getattr(self, f"on_{action}"))
+            toolbar.pack_start(btn, False, False, 5)
 
         self.url_entry = Gtk.Entry(text=HOMEPAGE, placeholder_text="Enter URL or search")
         self.url_entry.connect("activate", self.on_url_activate)
@@ -44,16 +44,16 @@ class Browser(Gtk.Window):
 
         self.show_all()
 
-    def on_back(self, button):
+    def on_back(self, btn):
         self.webview.go_back()
 
-    def on_forward(self, button):
+    def on_forward(self, btn):
         self.webview.go_forward()
 
-    def on_reload(self, button):
+    def on_reload(self, btn):
         self.webview.reload()
 
-    def on_home(self, button):
+    def on_home(self, btn):
         self.webview.load_uri(HOMEPAGE)
 
     def on_url_activate(self, entry):
