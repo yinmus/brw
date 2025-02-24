@@ -21,3 +21,5 @@ chmod +x install
 ./install
 ```
 
+more..
+[opasno](.images/screen.png)
